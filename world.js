@@ -33,11 +33,13 @@ async function loadWorldData() {
             const slideshowContainer = document.getElementById("container");
             slideshowContainer.innerHTML = '';
 
-            // Loop through the images and create slides
+            // I am looping through the images of the api and added .innerHTML in order to add the div of the slider
+            // inside it 
             selectedWorld.links.images.forEach((imageUrl, index) => {
                 const slideDiv = document.createElement("div");
                 slideDiv.classList.add("mySlides", "fade");
 
+                // I used index+1 to concatenate the number text
                 slideDiv.innerHTML = `
                     <div class="numbertext">${index + 1} / ${selectedWorld.links.images.length}</div>
                     <img src="${imageUrl}" style="width:100%">

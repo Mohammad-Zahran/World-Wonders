@@ -49,3 +49,21 @@
 .card button:hover {
     background-color: #0056b3;   
 }
+
+
+.icons {
+    display: flex;      
+    flex-direction: row;
+    justify-content: center;         
+    gap: 10px;                      
+    margin-left: 70px;               
+    width: 150px;
+}
+
+#google-icon {
+    width: 25px;
+}
+
+.icon:hover {
+    transform: scale(1.1);          
+}
