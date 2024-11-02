@@ -3,14 +3,17 @@
     margin: 0;
     border: 0;
     box-sizing: border-box;
+    font-family: 'Cinzel', sans-serif; 
 }
 
+
 .hero-section {
-    background-image: url('./assets/world.avif'); 
+    background-image: url('../assets/travel-concept-around-world-famous-260nw-601116497\ \(1\).jpg'); 
     height: 100vh;
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
+    margin-bottom: 60px;
 }
 
 .world-container {
