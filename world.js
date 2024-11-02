@@ -23,7 +23,16 @@ async function loadWorldData() {
             // I set the background Image of the first array in the API
             const heroSection = document.querySelector(".hero-section");
             heroSection.style.backgroundImage = `url('${selectedWorld.links.images[0]}')`;
-            
+
+            // I am updating the text content of the id to the specific api attribute
+            document.getElementById("span-name").textContent = selectedWorld.name;
+            document.getElementById("span-summary").textContent = selectedWorld.summary;
+            document.getElementById("span-location").textContent = selectedWorld.location;
+            document.getElementById("span-year").textContent = selectedWorld.build_year;
+            document.getElementById("span-time").textContent = selectedWorld.time_period;
+
+
+
         } else {
             console.error("World not found");
         }
