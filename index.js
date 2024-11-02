@@ -9,10 +9,13 @@ async function fetchData() {
         }
 
         const data = await response.json();
-        const worldCards = document.getElementById("card"); 
+        const worldCards = document.getElementById("world-cards"); 
 
-        // What I am doing is creating new elements for each data inside the API 
+        // Create new elements for each data inside the API 
         data.forEach(element => {
+            const card = document.createElement("div");
+            card.className = "wonder-card"; 
+
             const worldName = document.createElement("h1");
             worldName.textContent = element.name;
 
@@ -20,8 +23,13 @@ async function fetchData() {
             worldImage.src = element.links.images[0]; 
             worldImage.alt = element.name; 
 
-            worldCards.appendChild(worldName);
-            worldCards.appendChild(worldImage);
+            card.appendChild(worldName);
+            card.appendChild(worldImage);
+            
+            worldCards.appendChild(card);
+
+            // What I am doing here is appending the contents of the card to the card class that I create at the top
+            // and appended the card to the worldCards
         });
 
     } catch (error) {
