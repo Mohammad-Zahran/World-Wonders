@@ -28,6 +28,7 @@ async function loadWorldData() {
             document.getElementById("span-location").textContent = selectedWorld.location;
             document.getElementById("span-year").textContent = selectedWorld.build_year;
             document.getElementById("span-time").textContent = selectedWorld.time_period;
+            document.getElementById("span-categories").textContent = selectedWorld.categories;
 
             // Clear existing slides
             const slideshowContainer = document.getElementById("container");
@@ -44,6 +45,7 @@ async function loadWorldData() {
                     <div class="numbertext">${index + 1} / ${selectedWorld.links.images.length}</div>
                     <img src="${imageUrl}" style="width:100%">
                     <div class="text">Image ${index + 1}</div>
+                    
                     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                     <a class="next" onclick="plusSlides(1)">&#10095;</a>
                 `;
