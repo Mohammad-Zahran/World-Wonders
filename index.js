@@ -23,8 +23,20 @@ async function fetchData() {
             worldImage.src = element.links.images[0]; 
             worldImage.alt = element.name; 
 
+            const button = document.createElement("button");
+            button.textContent = "World Details"
+
+            // I used the name exactly since the API doesnt have a id attribute so I used the name 
+            // What is happening exactly is that the button is taking name of the element then navigating it 
+            // to the specific world
+            button.addEventListener("click", () => {
+                const id = element.name;
+                window.location.href = `world.html?id=${id}`;
+            })
+
             card.appendChild(worldName);
             card.appendChild(worldImage);
+            card.appendChild(button)
             
             worldCards.appendChild(card);
 
