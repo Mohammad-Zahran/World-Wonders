@@ -14,7 +14,7 @@ async function fetchData() {
         // Create new elements for each data inside the API 
         data.forEach(element => {
             const card = document.createElement("div");
-            card.className = "wonder-card"; 
+            card.className = "card"; 
 
             const worldName = document.createElement("h1");
             worldName.textContent = element.name;
